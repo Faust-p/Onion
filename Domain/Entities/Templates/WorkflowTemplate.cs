@@ -8,7 +8,7 @@ namespace Domain.Entities.Templates
         public Guid Id { get; private init; }
         public string Name { get; private set; }
         public IReadOnlyList<WorkflowStepTemplate> Steps => _steps;
-        //public IReadOnlyList<WorkflowStepTemplate> Steps { get; private set; }
+        
 
 
         private WorkflowTemplate(Guid id, string name, List<WorkflowStepTemplate> steps)
