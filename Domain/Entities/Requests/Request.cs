@@ -1,4 +1,4 @@
-﻿using Domain.Entities.Requests.Events;
+using Domain.Entities.Requests.Events;
 
 namespace Domain.Entities.Requests
 {
@@ -9,7 +9,7 @@ namespace Domain.Entities.Requests
         public User User { get; private set; } = null!;
         public Document Document { get; private set; } = null!;
         public Workflow Workflow { get; private set; } = null!;
-        public IReadOnlyCollection<IEvent> Events => _events.AsReadOnly();
+        public IReadOnlyList<IEvent> Events => _events.AsReadOnly();
 
         private Request(Guid id, User user, Document document, Workflow workflow)
         {
