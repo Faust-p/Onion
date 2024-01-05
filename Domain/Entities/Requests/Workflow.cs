@@ -6,7 +6,7 @@
         public Guid Id { get; }
         public string Name { get; private set; } = null!;
         public Guid WorkflowTemplateId { get; private init; }
-        public IReadOnlyCollection<WorkflowStep> Steps => _steps;
+        public IReadOnlyList<WorkflowStep> Steps => _steps;
 
         public Workflow(Guid id, Guid workflowTemplateId, string name, List<WorkflowStep> steps)
         {
